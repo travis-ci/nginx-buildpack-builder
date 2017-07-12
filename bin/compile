@@ -5,10 +5,10 @@ set -e
 echo "-----> nginx-buildpack: compiling nginx"
 scripts/build_nginx.sh
 
-nginx_version=$(/usr/local/sbin/nginx -V 2>&1 | head -1 | awk '{ print $NF }')
-echo "-----> nginx-buildpack: Installed ${nginx_version} to /usr/local/sbin"
+nginx_version=$(/app/nginx/sbin/nginx -V 2>&1 | head -1 | awk '{ print $NF }')
+echo "-----> nginx-buildpack: Installed ${nginx_version} to /app/nginx/sbin"
 cp bin/start-nginx "$1/bin/"
-echo '-----> nginx-buildpack: Added start-nginx to /usr/local/sbin'
+echo '-----> nginx-buildpack: Added start-nginx to /app/nginx/sbin'
 
 mkdir -p "$1/config"
 
