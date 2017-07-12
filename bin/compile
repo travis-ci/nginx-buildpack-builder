@@ -6,7 +6,7 @@ echo "-----> nginx-buildpack: compiling nginx"
 scripts/build_nginx.sh
 
 # tmp
-cp -r /tmp/nginx .
+cp -r /tmp/nginx $1
 exit 0
 
 mkdir -p "$1/bin/"
