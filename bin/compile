@@ -2,8 +2,8 @@
 
 set -e
 
-apt update
-apt install nginx
+apt-get update
+apt-get install nginx
 nginx_version=$(nginx -V 2>&1 | head -1 | awk '{ print $NF }')
 echo "-----> nginx-buildpack: Installed ${nginx_version} via apt"
 
