@@ -47,5 +47,4 @@ echo "Downloading $headers_more_nginx_module_url"
 while true
 do
 	sleep 1
-	echo "."
 done
