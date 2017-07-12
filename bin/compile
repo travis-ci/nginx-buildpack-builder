@@ -5,6 +5,9 @@ set -e
 echo "-----> nginx-buildpack: compiling nginx"
 scripts/build_nginx.sh
 
+# tmp
+exit 0
+
 mkdir -p "$1/bin/"
 cp "/tmp/nginx/bin/nginx" "$1/bin/nginx"
 nginx_version=$(/tmp/nginx/bin/nginx -V 2>&1 | head -1 | awk '{ print $NF }')
