@@ -1,4 +1,1 @@
 build-essential
-gcc-6-base
-linux-headers-generic
-nginx
