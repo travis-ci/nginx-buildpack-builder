@@ -4,7 +4,7 @@ set -e
 
 echo "-----> nginx-buildpack: compiling nginx"
 scripts/build_nginx.sh
-cp /app/nginx "$1"
+cp -r /app/nginx "$1"
 
 nginx_version=$(/app/nginx/sbin/nginx -V 2>&1 | head -1 | awk '{ print $NF }')
 echo "-----> nginx-buildpack: Installed ${nginx_version} to /app/nginx/sbin"
