@@ -30,6 +30,6 @@ echo "Downloading $pcre_tarball_url"
 	cd nginx-${NGINX_VERSION}
 	./configure \
 		--with-pcre=pcre-${PCRE_VERSION} \
-		--prefix=/tmp/nginx
+		--prefix=/usr/local
 	make install
 )
