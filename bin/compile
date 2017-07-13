@@ -5,4 +5,7 @@ set -e
 echo "-----> nginx-buildpack: compiling nginx"
 scripts/build_nginx.sh
 cp -r /tmp/nginx "$1"
+
+echo $STACK > "$1/stack"
+
 exit 0
