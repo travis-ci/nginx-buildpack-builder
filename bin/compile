@@ -2,10 +2,10 @@
 
 set -e
 
+mkdir -p "$1/web"
+
 echo "-----> nginx-buildpack: compiling nginx"
 scripts/build_nginx.sh
-cp -r /tmp/nginx "$1"
-
-echo $STACK > "$1/nginx/stack.txt"
+cp -r /tmp/nginx/sbin/nginx "$1/web/nginx-$STACK"
 
 exit 0
